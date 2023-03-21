@@ -1,17 +1,38 @@
 body {
     margin: 0;
     padding: 0;
+}
+
+.content {
+    max-width: 1260px;
+    margin: 0 auto;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+}
+.container {
+    margin: 30px;
+    padding: 5px;
+    max-width: 350px;
+    max-height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* position: relative; */
 }
 
 img{
     padding: 5px;
-   height: 250px;
-    width: auto;
+  height: 250px;
+    /* width: auto; */
 }
+
 h4{
+    padding: 5px;
+    margin: 0;
     padding: 5px;
 }
 
@@ -24,16 +45,6 @@ p::-webkit-scrollbar{
     display: none;
 }
 
-.container {
-    margin: 30px;
-    /* width; */
-    max-width: 350px;
-    max-height: 500px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
 
 
 
@@ -41,7 +52,10 @@ p::-webkit-scrollbar{
     
     background-color: rgba(215, 181, 29, 0.743);
     color: white;
+    height: 30px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
+    /* position: absolute; */
+    /* bottom: 0;
+    align-items: baseline; */
 }

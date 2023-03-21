@@ -1,5 +1,5 @@
 
-const pussyBody = document.querySelector("body");
+const pussyContent = document.querySelector(".content");
 
 const ENDPOINT = "https://api.thecatapi.com/v1/breeds";
 const IMAGES = "https://cdn2.thecatapi.com/images/";
@@ -22,11 +22,15 @@ async function catData() {
     let catImgName = catData[i].reference_image_id;
     let imgUrl = `${IMAGES}${catImgName}.jpg`;
 
-    pussyBody.innerHTML += `<div class="container">
-          <img src="${imgUrl}" alt="pussy" class="image-container">
-          <h4 class="cat-name">${catname}</h4>
-          <p class="description">${catdesc}</p> 
-          <button class="button">Profile</button> `;
+    pussyContent.innerHTML += `<div class="container">
+          <img src="${imgUrl}" alt="pussy" class="image-container"
+          onerror="this.onerror=null; this.src="./MissingCat.png">
+          <div><h4 class="cat-name">${catname}</h4></div>
+          <div><p class="description">${catdesc}</p></div> 
+          <div> <button class="button">Profile</button> </div>
+          
+          </div>
+           `;
     // imageContainer.src = imgUrl
   }
 }
